@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coding take home task: OpenWeatherMap
 
-## Getting Started
+Using OpenWeatherMap API, Next.js, Tailwindcss and Zustand, I made as requested and created a 5 day weather forecast app.
 
-First, run the development server:
+Vercel:
 
-```bash
-npm run dev
-# or
-yarn dev
+To used it you must set an environment variable called **API_KEY** with value equal to a OpenWeatherMap API key.
+
+###### **Notes**:
+
+The challenge said:
+
+```
+Frontend logic requirements:
+1. The page should show 5-day weather forecast for given city including:
+a. Morning temperature
+b. Day temperature
+c. Night temperature
+d. Humidity
+
+2. The page should also show following stats relevant to weather forecast:
+a. Minimum value
+b. Maximum value
+c. Mean value
+d. Mode value
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+But neither the Weather or Forecast OpenWeatherMap's API would return an object with night and morning temperature. (Maybe it's due to the Free version being different from the documentation) Said so, I improvised using both API, the result is:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Today's Forecast**
+Returns Weather (as image background), minimum, maximum and mean temperatures (as in the Weather API) and Humidity.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Next 4 days Forecast**
+Returns Weather (as image background), Morning, Day and Night _approximately_ temperatures (the Forecast API returns 8 different forecasts for each day, I _approximately_ selected the positions that would represent said time periods. I changes throught the day because de API _may or may not_ retur today's forecast _partialy or not_, what made it not so precise. A better sorting is possible but would take much more time) and Humidity.

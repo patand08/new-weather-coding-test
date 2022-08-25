@@ -15,7 +15,7 @@ export default function WeatherCard(props) {
         }
       >
         <Image
-          src={"/./../static/img/" + props.img + ".jpg"}
+          src={"/static/" + props.img + ".jpg"}
           alt={props.img}
           layout="fill"
           objectFit="cover"

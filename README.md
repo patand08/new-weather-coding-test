@@ -2,7 +2,7 @@
 
 Using OpenWeatherMap API, Next.js, Tailwindcss and Zustand, I made as requested and created a 5 day weather forecast app.
 
-Vercel: https://new-weather-coding-test-849nk0gmx-patrux08.vercel.app/
+Vercel: https://new-weather-coding-test-4lv67jry8-patrux08.vercel.app/
 
 To used it you must set an environment variable called **API_KEY** with value equal to a OpenWeatherMap API key.
 

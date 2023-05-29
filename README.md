@@ -1,4 +1,4 @@
-# Coding take home task: OpenWeatherMap
+# Coding take home task: OpenWeatherMap (Hired! 🎉)
 
 Using OpenWeatherMap API, Next.js, Tailwindcss and Zustand, I made as requested and created a 5 day weather forecast app.
 
@@ -33,4 +33,4 @@ Returns Weather (as image background), minimum, maximum and mean temperatures (a
 
 **Next 4 days Forecast**
 
-Returns Weather (as image background), Morning, Day and Night _approximately_ temperatures (the Forecast API returns 8 different forecasts for each day, I _approximately_ selected the positions that would represent said time periods. I changes throught the day because de API _may or may not_ retur today's forecast _partialy or not_, what made it not so precise. A better sorting is possible but would take much more time) and Humidity.
+Returns Weather (as image background), Morning, Day and Night _approximately_ temperatures (the Forecast API returns 8 different forecasts for each day, I _approximately_ selected the positions that would represent said time periods. It changes throught the day because de API _may or may not_ retur today's forecast _partialy or not_, what made it not so precise. A better sorting is possible but would take much more time) and Humidity.
